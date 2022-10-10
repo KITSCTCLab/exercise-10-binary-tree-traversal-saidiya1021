@@ -15,7 +15,7 @@ def insert(root, new_value) -> BinaryTreeNode:
     if self.left_child == None and self.right_child == None:
         root=new_value
         
-    elif:
+    else:
         while new_value <= root:
             self.left_child=new_value
             
