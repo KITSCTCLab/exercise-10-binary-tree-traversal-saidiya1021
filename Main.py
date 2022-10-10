@@ -25,15 +25,27 @@ def insert(root, new_value) -> BinaryTreeNode:
 
 
 def inorder(root) -> None:
-    # Write your code here
+    for i in range(len(self.left_child)):
+        print(i,endl=',')
+    print(root,endl=',')
+    for in range(len(self.right_child)):
+        print(i,endl',')
 
 
 def preorder(root) -> None:
-    # Write your code here
+    print(root,endl=',')
+    for i in range(len(self.left_child)):
+        print(i,endl=',')
+     for in range(len(self.right_child)):
+        print(i,endl=','-1)
 
 
 def postorder(root) -> None:
-    # Write your code here
+    for i in range(len(self.left_child)):
+        print(i,endl=',')
+     for in range(len(self.right_child)):
+        print(i,endl=','-1)
+     print(root,endl=',')
 
 
 # Do not change the following code
