@@ -28,7 +28,7 @@ def inorder(root) -> None:
     for i in range(len(self.left_child)):
         print(i,endl=',')
     print(root,endl=',')
-    for in range(len(self.right_child)):
+    for i in range(len(self.right_child)):
         print(i,endl',')
 
 
@@ -36,14 +36,14 @@ def preorder(root) -> None:
     print(root,endl=',')
     for i in range(len(self.left_child)):
         print(i,endl=',')
-     for in range(len(self.right_child)):
+     for i in range(len(self.right_child)):
         print(i,endl=','-1)
 
 
 def postorder(root) -> None:
     for i in range(len(self.left_child)):
         print(i,endl=',')
-     for in range(len(self.right_child)):
+     for i in range(len(self.right_child)):
         print(i,endl=','-1)
      print(root,endl=',')
 
