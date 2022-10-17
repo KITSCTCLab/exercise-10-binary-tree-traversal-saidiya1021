@@ -17,7 +17,7 @@ def insert(root, new_value) -> BinaryTreeNode:
         return root
         
     else:
-        if new_value < root:
+        if new_value < root.data:
             if root.left_child==None:
                 root.left_child=BinaryTreeNode(new_value)
             else:
