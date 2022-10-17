@@ -36,7 +36,7 @@ def inorder(root) -> None:
         print("")
         return
     inorder(root.left_child)
-    inorder(root.data)
+    print(root.data,end="")
     inorder(root.right_child)
     
 
@@ -44,7 +44,7 @@ def preorder(root) -> None:
     if root==None:
         print("")
         return
-    preorder(root.data)
+    print(root.data,end="")
     preorder(root.left_child)
     preorder(root.right_child)
     
@@ -55,7 +55,7 @@ def postorder(root) -> None:
         return
      postorder(root.left_child)
      postorder(root.right_child)
-     postorder(root.data)
+     print(root.data,end="")
 
 
 # Do not change the following code
