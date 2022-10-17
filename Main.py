@@ -11,41 +11,47 @@ def insert(root, new_value) -> BinaryTreeNode:
         If tree is not empty and if new_value is >= value of data in root, add it to right subtree and proceed recursively.
         Finally, return the root.
         """
-    new_value=BinaryTreeNode(data)
-    if self.left_child == None and self.right_child == None:
-        root=new_value
+   
+    if root=None:
+        root=BinaryTreeNode(new_value)
+        retuen root
         
     else:
-        while new_value <= root:
-            self.left_child=new_value
+        if new_value < root:
+            if root.left_child==None:
+                root.left_child=BinaryTreeNode(new_value)
+            else:
+                insert(root.left_child,new_value)
+        else:
+             if root.left_child==None:
+                root.left_child=BinaryTreeNode(new_value)
+            else:
+                insert(root.left_child,new_value)
             
-        while new_value >= root:
-            self.right_child=new_value
-    return root
+      
 
 
 def inorder(root) -> None:
-    for i in range(len(self.left_child)):
-        print(i,endl=',')
-    print(root,endl=',')
-    for i in range(len(self.right_child)):
-        print(i,endl=',')
-
+    if root== None:
+        print("")
+    inorder(root.left)
+    inorder(root.data)
+    inorder(root.right)
 
 def preorder(root) -> None:
-    print(root,endl=',')
-    for i in range(len(self.left_child)):
-        print(i,endl=',')
-     for i in range(len(self.right_child)):
-        print(i,endl=',')
-
+    if root=None:
+        print("")
+    preorder(root.data)
+    preorder(root.left)
+    preorder(root.right)
+    
 
 def postorder(root) -> None:
-    for i in range(len(self.left_child)):
-        print(i,endl=',')
-     for i in range(len(self.right_child)):
-        print(i,endl=',')
-     print(root,endl=',')
+     if root=None:
+        print("")
+    postorder(root.left)
+    postorder(root.right)
+    postorder(root.data)
 
 
 # Do not change the following code
