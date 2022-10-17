@@ -12,9 +12,9 @@ def insert(root, new_value) -> BinaryTreeNode:
         Finally, return the root.
         """
    
-    if root=None:
+    if root==None:
         root=BinaryTreeNode(new_value)
-        retuen root
+        return root
         
     else:
         if new_value < root:
@@ -39,7 +39,7 @@ def inorder(root) -> None:
     inorder(root.right)
 
 def preorder(root) -> None:
-    if root=None:
+    if root==None:
         print("")
     preorder(root.data)
     preorder(root.left)
@@ -47,7 +47,7 @@ def preorder(root) -> None:
     
 
 def postorder(root) -> None:
-     if root=None:
+     if root==None:
         print("")
     postorder(root.left)
     postorder(root.right)
