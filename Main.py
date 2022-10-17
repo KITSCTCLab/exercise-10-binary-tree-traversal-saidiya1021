@@ -34,23 +34,23 @@ def insert(root, new_value) -> BinaryTreeNode:
 def inorder(root) -> None:
     if root== None:
         print("")
-    inorder(root.left)
+    inorder(root.left_child)
     inorder(root.data)
-    inorder(root.right)
+    inorder(root.right_child)
 
 def preorder(root) -> None:
     if root==None:
         print("")
     preorder(root.data)
-    preorder(root.left)
-    preorder(root.right)
+    preorder(root.left_child)
+    preorder(root.right_child)
     
 
 def postorder(root) -> None:
      if root==None:
         print("")
-     postorder(root.left)
-     postorder(root.right)
+     postorder(root.left_child)
+     postorder(root.right_child)
      postorder(root.data)
 
 
