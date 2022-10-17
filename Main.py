@@ -49,9 +49,9 @@ def preorder(root) -> None:
 def postorder(root) -> None:
      if root==None:
         print("")
-    postorder(root.left)
-    postorder(root.right)
-    postorder(root.data)
+     postorder(root.left)
+     postorder(root.right)
+     postorder(root.data)
 
 
 # Do not change the following code
