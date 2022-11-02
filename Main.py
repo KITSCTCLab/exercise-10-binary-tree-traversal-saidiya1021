@@ -18,22 +18,21 @@ def insert(root, new_value) -> BinaryTreeNode:
         
     else:
         if new_value < root.data:
-            if root.left_child==None:
-                root.left_child=BinaryTreeNode(new_value)
+            if root.left_child:
+                insert(root.left_child,new_value)
             else:
-                insert(root.left_child,new_value)
-        else:
-             if root.left_child==None:
                 root.left_child=BinaryTreeNode(new_value)
+        else:
+             if root.right_child:
+                insert(root.right_child,new_value)
              else:
-                insert(root.left_child,new_value)
+                root.right_child=BinaryTreeNode(new_value)
             
       
 
 
 def inorder(root) -> None:
     if root== None:
-        print("",end=" ")
         return
     inorder(root.left_child)
     print(root.data,end=" ")
@@ -42,7 +41,6 @@ def inorder(root) -> None:
 
 def preorder(root) -> None:
     if root==None:
-        print("",end=" ")
         return
     print(root.data,end=" ")
     preorder(root.left_child)
@@ -51,7 +49,6 @@ def preorder(root) -> None:
 
 def postorder(root) -> None:
      if root==None:
-        print("",end=" ")
         return
      postorder(root.left_child)
      postorder(root.right_child)
